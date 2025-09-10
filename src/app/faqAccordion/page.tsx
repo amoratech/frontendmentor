@@ -16,34 +16,65 @@ export default function Page() {
     "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.",
   ];
 
+  const [hidden, setHidden] = useState([false, false, false, false]);
+
+  const toggleHidden = (index) => {
+    const updateHidden = [...hidden];
+    updateHidden[index] = !updateHidden[index];
+    setHidden(updateHidden);
+  };
   const components = titles.map((title, index) => {
-    return(
-    <>
-      <div className="flex flex-row items-center gap-18">
-        <p className="font-bold w-[80%]">
-          {title}
-        </p>
-        <div className="w-[20%]">
-          <img src={"images/faqAccordion/icon-plus.svg"} className="mx-auto" onClick={}/>
+    return (
+      <div key={index} onClick={() => toggleHidden(index)}>
+        <div className="flex flex-row items-center gap-18 pl-[12px]">
+          <p className="font-bold w-[90%] text-[14px] hover:text-purple-400">{title}</p>
+          <div className="w-[10%]">
+            {hidden[index] ? (
+              <img
+                src={"images/faqAccordion/icon-minus.svg"}
+                className="mx-auto"
+               
+              />
+            ) : (
+              <img
+                src={"images/faqAccordion/icon-plus.svg"}
+                className="mx-auto"
+            
+              />
+            )}
+          </div>
         </div>
+        {hidden[index] ? 
+        (<div className="text-gray-400 mt-[20px] pl-[12px] pb-[12px]">{descriptions[index]}</div>):
+        (<div className="text-gray-400 mt-[20px] hidden">{descriptions[index]}</div>)}
+        <hr className=" w-[90%] mx-auto my-[8px] text-gray-300"/>
       </div>
-      <div className="text-gray-400 mt-[20px]">
-        {descriptions[index]}
-      </div>
-    </>
-  )});
+    );
+  });
+
   return (
     <>
-    
-      <div className="bg-[#F9F0FF] w-[100vw] h-[100vh] relative">
+      <div className="bg-[#F9F0FF] w-[100vw] h-[100vh] relative ">
         <img
           src={"images/faqAccordion/background-pattern-mobile.svg"}
           width={"100%"}
-          className="absolute z-0"
+          className="absolute z-0 md:hidden"
+        />
+        <img
+          src={"images/faqAccordion/background-pattern-desktop.svg"}
+          width={"100%"}
+          className="absolute z-0 hidden md:block"
         />
         <div />
         <div className=" w-[100vw] z-10 absolute mt-[120px] ">
-          <div className="bg-[#ffffff] mx-auto w-[85%] rounded-lg p-[12px]">
+          <div className="bg-[#ffffff] mx-auto w-[85%] md:w-[60%] rounded-lg p-[12px] md:p-[24px] shadow-2xl">
+            <div className="flex flex-row items-center my-[20px] ml-[20px]">
+              <img
+                src={"images/faqAccordion/icon-star.svg"}
+                className="w-[30px]"
+              ></img>
+              <p className="text-[30px] md:text-[48px] ml-[20px] font-bold">FAQs</p>
+            </div>
             {components}
           </div>
         </div>
