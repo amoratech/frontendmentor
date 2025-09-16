@@ -62,7 +62,7 @@ export default function Page() {
         />
         <img
           src={"images/faqAccordion/background-pattern-desktop.svg"}
-          width={"100%"}
+          width={'100%'}
           className="absolute z-0 hidden md:block"
         />
         <div />
