@@ -28,7 +28,7 @@ export default function Page() {
                   A floral, solar and voluptuous interpretation composed by
                   Olivier Polge, Perfumer-Creator for the House of CHANEL.
                 </div>
-                <div className="flex flex-row items-center"><span className="text-[#3C8067] font-[Fraunces] font-bold text-[38px] pr-[12px]">$149.99</span><span className="line-through text-gray-400">$169.99</span></div>
+                <div className="flex flex-row items-center "><span className="text-[#3C8067] font-[Fraunces] font-bold text-[38px] pr-[12px]">$149.99</span><span className="line-through text-gray-400">$169.99</span></div>
                 <div className="w-full mx-auto text-center bg-[#3C8067] text-white font-bold flex flex-row justify-center items-center py-[12px] rounded-lg mb-[24px]"><img src={'/images/product-preview/icon-cart.svg'} className="size-[18px] mr-[8px]"></img>Add to Cart</div>
               </div>
             </div>
