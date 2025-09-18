@@ -78,12 +78,12 @@ export default function Page() {
           className="absolute z-0 md:hidden"
         />
         <img
-          src={"images/faqAccordion/background-pattern-desktop.svg"}
+          src={"homeBanner2.jpg"}
           width={"100%"}
           className="absolute z-0 hidden md:block"
         />
        
-        <div className=" w-[100vw] z-10 absolute mt-[120px] ">
+        <div className=" w-[100vw] z-10 absolute mt-[220px] ">
           <div className="bg-[#ffffff] mx-auto w-[85%] md:w-[60%] rounded-lg p-[12px] md:p-[24px] shadow-2xl">
             <div className="flex flex-row items-center my-[20px] ml-[20px]">
               <img
