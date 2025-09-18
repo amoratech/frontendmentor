@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useParams, usePathname, useSearchParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 
 export default function Page() {
   const params = useParams();

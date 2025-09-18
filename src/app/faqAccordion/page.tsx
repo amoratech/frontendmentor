@@ -18,7 +18,7 @@ export default function Page() {
 
   const [hidden, setHidden] = useState([false, false, false, false]);
 
-  const toggleHidden = (index:any) => {
+  const toggleHidden = (index:number) => {
     const updateHidden = [...hidden];
     updateHidden[index] = !updateHidden[index];
     setHidden(updateHidden);
