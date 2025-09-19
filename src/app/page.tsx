@@ -27,7 +27,7 @@ export default function Page() {
     updateHidden[index] = !updateHidden[index];
     setHidden(updateHidden);
   };
-  const components = titles.map((title, index) => {
+  const components = titles.map((title:string, index:number) => {
     return (
       <div key={index} onClick={() => toggleHidden(index)}>
         <div className="flex flex-row items-center gap-18 pl-[12px]">
