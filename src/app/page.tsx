@@ -20,13 +20,17 @@ export default function Page() {
     "/contactForm"
   ];
 
-  const [hidden, setHidden] = useState([false, false, false, false]);
+const [hidden, setHidden] = useState<boolean[]>([false, false, false, false]);
 
-  const toggleHidden = (index:number) => {
-    const updateHidden = [...hidden];
-    updateHidden[index] = !updateHidden[index];
-    setHidden(updateHidden);
-  };
+const toggleHidden = (index: number) => {
+  if (index < 0 || index >= hidden.length) return;
+  setHidden(prev => {
+    const next = [...prev];
+    next[index] = !next[index];
+    return next;
+  });
+};
+
   const components = titles.map((title:string, index:number) => {
     return (
       <div key={index} onClick={() => toggleHidden(index)}>
