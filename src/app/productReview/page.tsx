@@ -6,17 +6,17 @@ export default function Page() {
     <>
       <main className="bg-[#F2EBE3] w-[100vw] h-[100vh]">
         <div className=" flex flex-col md:flex-row">
-          <div className="flex flex-col md:flex-row w-[90%] md:w-[35%]  h-auto mx-auto justify-center items-center bg-white rounded-2xl mt-[96px]">
+          <div className="flex flex-col md:flex-row w-[90%] md:w-[35%]  h-auto mx-auto justify-center items-center bg-white rounded-2xl mt-[96px] md:min-w-[580px]">
             <div className="w-[100%] ">
               <img
                 src={"/images/product-preview/image-product-desktop.jpg"}
                 alt="cologne-image"
-                className="rounded-tl-2xl rounded-bl-2xl  hidden md:block"
+                className="rounded-tl-2xl rounded-bl-2xl  hidden md:block min-w-[280px]"
               />
                <img
                 src={"/images/product-preview/image-product-mobile.jpg"}
                 alt="cologne-image"
-                className="rounded-tl-2xl rounded-tr-2xl md:rounded-bl-2xl md:rounded-tl-2xl md:hidden"
+                className="rounded-tl-2xl rounded-tr-2xl md:rounded-bl-2xl md:rounded-tl-2xl md:hidden "
               />
             </div>
 
