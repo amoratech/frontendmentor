@@ -20,7 +20,7 @@ export default function Page() {
     "/contactForm"
   ];
 
-  const [hidden, setHidden]:Array = useState([false, false, false, false]);
+  const [hidden, setHidden] = useState<boolean[]>([false, false, false, false]);
 
   const toggleHidden = (index:number) => {
     const updateHidden = [...hidden];
